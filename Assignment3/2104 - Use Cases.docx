@@ -1,0 +1,6 @@
+//What validations to do while taking string input
+
+{a+[b/c(v*d)+d]/f}*d : Valid expression.
+{a+[b/c(v*d)+d]/f}*d} : Invalid expression. Closing brackets more than opening brackets.
+{a+[b/c(v*d)+d]/f}*d} : Invalid Expression. Opening brackets more than closing brackets.
+{a+[b/c(v*d)+d]/f)*d : Inivalid Expression. Bracket mismatch found. Closing bracket not matching opening bracket.
