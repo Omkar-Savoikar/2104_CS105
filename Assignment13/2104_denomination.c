@@ -21,8 +21,7 @@ void main() {
     scanf("%d", &A);
     for (i = 0; i <= A; i++)
         C[n-1][i] = i;
-    for (i = n-2; i >= 0; i--) {
-        printf("\n%d ",den[i]);
+    for (i = n-2; i >= 0; i--)
         for (j = 0; j <= A; j++) {
             if (den[i] > j)
                 C[i][j] = C[i+1][j];
@@ -30,9 +29,7 @@ void main() {
                 temp = C[n-1][j] / den[i];
                 C[i][j] = (C[i+1][j] < (1 + C[i][j - den[i]]) ) ? C[i+1][j] : (1 + C[i][j - den[i]]);
             }
-            printf("%d ", C[i][j]);
         }
-    }
     printf("\nDenominations:");
     for (i = 0; i < n; i++) {
         printf("\n%d = %d", den[i], C[i][A]);
