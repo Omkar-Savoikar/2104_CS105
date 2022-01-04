@@ -1,5 +1,13 @@
+/*
+    AUTHOR: MCA.2104
+    PROGRAM: COIN CHANGE
+    DATE CREATED: 04 JAN 2022
+    DATE MODIFIED: 04 JAN 2022
+*/
+//APPLICATION DEVELOPER
 #include<stdio.h>
 #include<conio.h>
+
 void main() {
     int n, A, den[10], C[10][50];
     int i, j, temp, min;
