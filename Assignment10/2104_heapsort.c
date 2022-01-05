@@ -7,13 +7,14 @@
 //APPLICATION DEVELOPER
 #include<stdio.h>
 #include<conio.h>
-#include<stdbool.h>
+#include<stdlib.h>
 #include<string.h>
 #include<malloc.h>
 #include"2104_heap.h"
 
 void main() {
-    int option, arr[50], value, size;
+    EleType value, arr[50];
+    int option;
     int i;
     option = 1;
     size = 0;
@@ -41,8 +42,10 @@ void main() {
                 //construct heap
                 printf("\nEnter array length: ");
                 scanf("%d", &size);
-                if (size > 50)
+                if (size > 50) {
                     printf("\nMax size allowed = 50. Enter length less than or equal to 50.");
+                    exit(1);
+                }
                 for (i = 0; i < size; i++){
                     printf("\nEnter element value: ");
                     scanf("%d", &arr[i]);
@@ -67,7 +70,6 @@ void main() {
                 }
                 for (i = 0; i < size; i++)
                     arr[i] = heap[i];
-                
                 sort(arr, size);
                 break;
             }

@@ -8,85 +8,87 @@
 #ifndef HEAP
     #define HEAP
 
-    int heap[50];
+    typedef int EleType;
+    EleType heap[50];
+    int size;
 
     /*
     function name: swap
     function: swaps two values
-    input: int*, int*
+    input: EleType*, EleType*
     pre-condition: none
     output: none
-    post-condition: values at provided pointers swapped
+    post-condition: values at provided poEleTypeers swapped
     */
-    void swap(int *x, int *y);
+    void swap(EleType *x, EleType *y);
 
     /*
     function name: reHeapUp
     function: swaps current node with parent if current node value is larger than parent
-    input: int[], int*
+    input: EleType[], EleType*
     pre-condition: value should be inserted in the heap
     output: none
     post-condition: value at index position placed properly in the heap
     */
-    void reHeapUp(int heap[], int *index);
+    void reHeapUp(EleType heap[], EleType *index);
 
     /*
     function name: insertElement
     function: inserts element in the heap
-    input: int[], int*, int
+    input: EleType[], EleType*, EleType
     pre-condition: size != 50
     output: none
     post-condition: new value inserted in the heap at proper position
     */
-    void insertElement(int heap[], int *size, int value);
+    void insertElement(EleType heap[], EleType *size, EleType value);
 
     /*
     function name: display
     function: displays all the elements in the heap
-    input: int[], int
+    input: EleType[], EleType
     pre-condition: size > 0
     output: none
     post-condition: all elements in the heap are displayed
     */
-    void display(int heap[], int size);
+    void display(EleType heap[], EleType size);
 
     /*
     function name: reHeapDown
     function: swaps current node with largest of the child node
-    input: int[], int, int
+    input: EleType[], EleType, EleType
     pre-condition: root element should be deleted
     output: none
     post-condition: value at index position placed properly in the heap
     */
-    void reHeapDown(int heap[], int size, int index);
+    void reHeapDown(EleType heap[], EleType size, EleType index);
 
     /*
     function name: deleteRoot
     function: deletes the root element
-    input: int[], int*
+    input: EleType[], EleType*
     pre-condition: size > 0
-    output: int
+    output: EleType
     post-condition: root element deleted
     */
-    int deleteRoot(int heap[], int *size);
+    EleType deleteRoot(EleType heap[], EleType *size);
 
     /*
     function name: construct
     function: creates new heap from given elements
-    input: int[], int[], int*
+    input: EleType[], EleType[], EleType*
     pre-condition: none
     output: none
     post-condition: new heap constructed
     */
-    void construct(int arr[], int heap[], int *size);
+    void construct(EleType arr[], EleType heap[], EleType *size);
 
     /*
     function name: sort
     function: sorts the elements in the heap in ascending order
-    input: int[], int
+    input: EleType[], EleType
     pre-condition: size > 0
     output: none
     post-condition: sorted heap is displayed
     */
-    void sort(int heap[], int size);
+    void sort(EleType heap[], EleType size);
 #endif
